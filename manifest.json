@@ -1,0 +1,25 @@
+{
+  "name": "Ultimate html eraser",
+  "description": "Erase all html, keeping only essencial elements",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+      "default_title": "Ultimate html eraser",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*",
+        "file:///*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}

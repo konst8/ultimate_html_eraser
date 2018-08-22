@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ultimate html eraser</title>
+    <script src="popup.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;        
+      }
+      body {
+        width: 400px;
+        padding: 10px;
+      }
+      .form-item {
+        margin: 10px 0;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        margin-left: 10px;
+      }
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <form id="erase-form">
+      <input type="text" class="leave-on-page" placeholder="Set what to leave after erase"/>
+      <div class="form-item">
+        <input name="include-tree" type="checkbox" checked="checked">
+        <label for="tree">Keep element's tree (parents/children)</label>
+      </div>
+      <div class="form-item">
+        <input name="include-tree" type="checkbox" checked="checked">
+        <label for="tree">Keep &lt;head&gt; tag - usually contains styles, sripts and fonts</label>
+      </div>
+      <div class="form-item">
+        <div>
+          <input type="radio" name="erase-mode" id="hard-erase" checked="checked">
+          <label for="hard-erase">Hard mode - erase html</label>
+        </div>
+        <div>
+          <input type="radio" name="erase-mode" id="light-erase">
+          <label for="light-erase">Light mode - just shadow unwanted elements</label>
+        </div>
+      </div>
+      <div class="actions">
+        <input type="submit" value="Erase"/>
+        <button>Save</button>
+      </div>
+    </form>
+  </body>
+</html>
